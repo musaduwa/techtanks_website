@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check my phone · TechTanks</title>
+<meta name="description" content="Free check: is your phone&#x27;s model Type Approved?">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><symbol id="tt-message" viewBox="0 0 24 24"><path d="M3 5h18v12H9l-5 4v-4H3z M7 9h10 M7 12h7"/></symbol><symbol id="tt-dial" viewBox="0 0 24 24"><path d="M7 2h10v20H7z M10 19h4 M10 7h1 M13 7h1 M10 10h1 M13 10h1 M10 13h1 M13 13h1"/></symbol><symbol id="tt-model" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10"/></symbol><symbol id="tt-gate1" viewBox="0 0 24 24"><path d="M4 3h16v14H4z M4 7h16 M8 21h8 M12 17v4 M9 12l2 2 4-4"/></symbol><symbol id="tt-price" viewBox="0 0 24 24"><path d="M3 12l9-9h9v9l-9 9z M15 8h1v1h-1z"/></symbol><symbol id="tt-pay" viewBox="0 0 24 24"><path d="M2 6h20v12H2z M2 10h20 M6 15h4 M15 15h3"/></symbol><symbol id="tt-gate2" viewBox="0 0 24 24"><path d="M5 3h9l5 5v13H5z M14 3v5h5 M9 14l2.5 2.5L16 12"/></symbol><symbol id="tt-track" viewBox="0 0 24 24"><path d="M4 4h16v16H4z M8 8h2v2H8z M8 12h2v2H8z M8 16h2v2H8z M12 9h5 M12 13h5 M12 17h5"/></symbol><symbol id="tt-importer" viewBox="0 0 24 24"><path d="M2 17h20 M4 17V9h8V5h5l3 4v8 M7 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M15 9h5"/></symbol><symbol id="tt-dealer" viewBox="0 0 24 24"><path d="M3 9l2-5h14l2 5 M3 9h18v3H3z M5 12v9h14v-9 M9 21v-5h6v5"/></symbol><symbol id="tt-owner" viewBox="0 0 24 24"><path d="M9 2h6v20H9z M11 18h2 M3 22c0-3 2.5-5 5-5 M16 17c2.5 0 5 2 5 5"/></symbol><symbol id="tt-typeapproval" viewBox="0 0 24 24"><path d="M4 3h16v13H4z M8 7h8 M8 10h5 M9 16v6l3-2 3 2v-6"/></symbol><symbol id="tt-ok" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M7 12l3 3 7-7"/></symbol><symbol id="tt-wait" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M12 6v6h5"/></symbol><symbol id="tt-no" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M8 8l8 8 M16 8l-8 8"/></symbol><symbol id="tt-info" viewBox="0 0 24 24"><path d="M4 4h16v16H4z M12 10v6 M12 7v1"/></symbol><symbol id="tt-phone" viewBox="0 0 24 24"><path d="M6 2h12v20H6z M10 18h4 M6 6h12"/></symbol><symbol id="tt-tablet" viewBox="0 0 24 24"><path d="M3 3h18v18H3z M3 7h18 M11 18h2"/></symbol><symbol id="tt-laptop" viewBox="0 0 24 24"><path d="M4 5h16v11H4z M2 19h20"/></symbol><symbol id="tt-basestation" viewBox="0 0 24 24"><path d="M12 22V8 M8 22h8 M9 8h6 M12 2v2 M6 6l2 2 M18 6l-2 2 M4 11l3 1 M20 11l-3 1"/></symbol><symbol id="tt-exchange" viewBox="0 0 24 24"><path d="M3 3h18v18H3z M3 9h18 M3 15h18 M7 6h1 M7 12h1 M7 18h1 M11 6h6 M11 12h6 M11 18h6"/></symbol><symbol id="tt-call" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol><symbol id="tt-chat" viewBox="0 0 24 24"><path d="M3 4h18v13h-9l-5 4v-4H3z M8 10h1 M12 10h1 M16 10h1"/></symbol><symbol id="tt-email" viewBox="0 0 24 24"><path d="M3 5h18v14H3z M4 6l8 7 8-7"/></symbol><symbol id="tt-location" viewBox="0 0 24 24"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z M12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol><symbol id="tt-arrow" viewBox="0 0 24 24"><path d="M4 12h15 M13 6l6 6-6 6"/></symbol><symbol id="tt-search" viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12 6 6 0 0 0 0-12z M14.5 14.5L21 21"/></symbol><symbol id="tt-menu" viewBox="0 0 24 24"><path d="M3 6h18 M3 12h18 M3 18h18"/></symbol></svg>
+<a class="skip" href="#main">Skip to content</a>
+<div class="proto">Prototype for review — demonstration data; nothing you type is sent anywhere.</div>
+<header class="header">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="TechTanks home"><img src="assets/logo-secondary.png" alt="TechTanks Solutions Nigeria Limited"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="register.html">Register a phone</a><a href="type-approval.html">Type Approval</a><a href="work.html">Our work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="tt-btn tt-btn-primary" href="check.html">Check a phone</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="section"><div class="container">
+  <p class="kicker">Check my phone — free</p>
+  <h1>Is your phone's model Type Approved?</h1>
+  <div class="grid c2" style="align-items:start;margin-top:var(--tt-space-8)">
+    <div class="card">
+      <p>Enter the model number from the box, the back of the phone, or Settings → About phone. The check is free and takes a moment. The Commission's own checker at ncc.gov.ng/devicechecker takes the IMEI number and shows the model and its Type Approval status.</p>
+      <form id="check-form" novalidate>
+        <div class="field"><label for="model">Model number</label><input id="model" name="model" type="text" required autocomplete="off"><p class="hint">Try SM-A165F, A3287, KL5, X6880 or 24040RN64Y — or type a name like “Spark 30”.</p><p class="field-error">Please enter the model number.</p></div>
+        <div class="field"><label for="imei1">IMEI number 1 <span class="opt">(optional)</span></label><input id="imei1" name="imei1" type="text" autocomplete="off"><p class="hint">Dial *#06#. Not needed for the check.</p><p class="field-error">Please fill this in.</p></div>
+        <div class="field"><label for="imei2">IMEI number 2 <span class="opt">(optional)</span></label><input id="imei2" name="imei2" type="text" autocomplete="off"><p class="field-error">Please fill this in.</p></div>
+        <button class="tt-btn tt-btn-primary" type="submit">Check now</button>
+      </form>
+      <div id="check-result" class="result" aria-live="polite"></div>
+      <p class="muted" style="margin-top:var(--tt-space-6)">You can also check with the Commission directly: dial *315#, or visit ncc.gov.ng/devicechecker.</p>
+    </div>
+    <div>
+      <div class="notice"><b>Prototype notice.</b> This demonstration uses a sample of the Commission's public register of mobile phones, downloaded 19–20 October 2026 — current models from the six biggest brands plus iPhone 15 and 16. The live site will query the current register.</div>
+      <h3 style="margin-top:var(--tt-space-8)">Three possible answers</h3>
+      <p><span class="chip ok">Type Approved</span><br>This model is on the Commission's Type Approval register. Your own phone: call 315, free. A shop's stock: Dealer Registration.</p>
+      <p><span class="chip no">Not found on the register</span><br>It cannot be registered until the manufacturer or an importer applies for Type Approval. We charge nothing.</p>
+      <p><span class="chip wait">Needs manual confirmation</span><br>The model number matches more than one entry, or is written differently on the register. Leave your name and phone number and we will confirm. No charge.</p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <p class="cobrand">IMEI registration powered by TechTanks Solutions Nigeria Limited × Telgenix Global Services Ltd. Type Approval for Apple products is handled exclusively by Telgenix.</p>
+    <div class="grid c3">
+      <div><h4>TechTanks Solutions Nigeria Limited</h4><ul><li>RC 1700639</li><li>No. 5 Siraso Close, Wuse Zone 7, Abuja</li><li><a href="mailto:hello@techtanks.tech">hello@techtanks.tech</a></li><li><a href="tel:+2347065784089">+234 70 6578 4089</a></li></ul></div>
+      <div><h4>Registration</h4><ul><li><a href="owner.html">For phone owners — call 315, free</a></li><li><a href="dealer.html">Dealer Registration</a></li><li><a href="importer.html">Importer Registration</a></li><li><a href="manufacturer.html">Manufacturer Programme</a></li><li><a href="check.html">Check a phone (free)</a></li><li><a href="track.html">Track a registration</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="type-approval.html">Type Approval</a></li><li><a href="work.html">Our work</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li>LinkedIn · Instagram @tech_tanks · X @techtanks</li></ul></div>
+    </div>
+    <div class="legal">
+      <p>The Nigerian Communications Commission's Device Management System is the official register. TechTanks is a Sales and Installation licence holder [licence number to follow once issued] registering phones for dealers, importers and manufacturers. If you hold one phone, call 315 — registration is free. We never charge individuals, and we never ask for bank details or your National Identification Number.</p>
+      <p>Privacy: we collect your name and phone number to send your tracking number and status updates. We do not sell or share your details.</p>
+      <p>© 2026 TechTanks Solutions Nigeria Limited.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/sample-register.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

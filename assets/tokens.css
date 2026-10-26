@@ -1,0 +1,119 @@
+/* TechTanks Brand Guide v2 — design tokens
+   21 October 2026. Source of Truth v1.0 §4.
+   Primary orange is #F15F24. The 2022 Mini Brand Guide prints #e9262a; that is a
+   typographical error — every logo file, the pattern and the website use #F15F24. */
+
+:root {
+  /* ---- Brand colours (named, each with a job) ---- */
+  --tt-orange:        #F15F24; /* primary: buttons, one accent per page, the icon's bars */
+  --tt-navy:          #0D262E; /* structural: headings, body text, footer, dark panels */
+  --tt-cream:         #ECD9BE; /* surface accent: highlighted cards, cover panels */
+  --tt-cream-100:     #F6EFE3; /* surface: section backgrounds */
+  --tt-cream-50:      #FBF7F0; /* surface: page background alternative to white */
+  --tt-white:         #FFFFFF;
+
+  /* ---- Orange scale (from the 2022 website, kept) ---- */
+  --tt-orange-900: #3A1304;
+  --tt-orange-800: #732607;
+  --tt-orange-700: #A93203; /* text links and small orange text on white (6.68:1) */
+  --tt-orange-600: #DB470C; /* button hover */
+  --tt-orange-500: #F15F24; /* = --tt-orange */
+  --tt-orange-400: #F67F4F;
+  --tt-orange-300: #F99974;
+  --tt-orange-200: #FBBBA1;
+  --tt-orange-100: #FDDCCE;
+  --tt-orange-50:  #FFF2ED; /* orange tint for notices */
+  --tt-orange-10:  #FCF8F7;
+
+  /* ---- Navy scale ("green" in the 2022 CSS; renamed) ---- */
+  --tt-navy-900: #040E11;
+  --tt-navy-800: #0D262E; /* = --tt-navy */
+  --tt-navy-700: #194250; /* dark panel alternative; white on it 10.84:1 */
+  --tt-navy-600: #286377;
+  --tt-navy-500: #4497B3; /* charts: second series */
+  --tt-navy-400: #5FB6D3;
+  --tt-navy-300: #92CFE3;
+  --tt-navy-200: #BCDFEB;
+  --tt-navy-100: #D8EAF1;
+  --tt-navy-50:  #ECF4F7;
+  --tt-navy-10:  #F5FBFC;
+
+  /* ---- Greys ---- */
+  --tt-grey-900: #060708;
+  --tt-grey-800: #1C2023;
+  --tt-grey-700: #3C4148; /* secondary body text (10.28:1 on white) */
+  --tt-grey-600: #575F68; /* captions on cream (6.07:1 on #FBF7F0) */
+  --tt-grey-500: #6C757F; /* smallest permitted text colour on white (4.68:1) */
+  --tt-grey-400: #97A1AC; /* decorative only — never text */
+  --tt-grey-300: #ACB4BC;
+  --tt-grey-200: #C7CCD2; /* borders */
+  --tt-grey-100: #E2E5E9; /* dividers */
+  --tt-grey-50:  #EDF0F2;
+  --tt-grey-10:  #F8F9FA;
+
+  /* ---- Semantic ---- */
+  --tt-text:          var(--tt-navy);
+  --tt-text-muted:    var(--tt-grey-700);
+  --tt-bg:            var(--tt-white);
+  --tt-bg-alt:        var(--tt-cream-50);
+  --tt-border:        var(--tt-grey-200);
+  --tt-link:          var(--tt-orange-700);
+  --tt-focus:         var(--tt-navy-500);
+  --tt-status-ok:     #1E7F4F; /* "Type Approved" / "Registered" */
+  --tt-status-wait:   #B86E00; /* "Awaiting payment" */
+  --tt-status-no:     #A93203; /* "Not Type Approved — no charge" */
+
+  /* ---- Typography ---- */
+  --tt-font-head: "Oswald", "Arial Narrow", Impact, sans-serif;
+  --tt-font-body: "Nunito Sans", "Nunito", Arial, sans-serif;
+
+  --tt-text-xs:   0.75rem;   /* 12px captions, footers */
+  --tt-text-sm:   0.875rem;  /* 14px table cells, labels */
+  --tt-text-base: 1rem;      /* 16px body — never smaller on the public site */
+  --tt-text-lg:   1.125rem;  /* 18px lead paragraphs */
+  --tt-text-xl:   1.375rem;  /* 22px h4 */
+  --tt-text-2xl:  1.75rem;   /* 28px h3 */
+  --tt-text-3xl:  2.25rem;   /* 36px h2 */
+  --tt-text-4xl:  3rem;      /* 48px h1 desktop */
+  --tt-text-5xl:  4rem;      /* 64px hero number */
+
+  --tt-leading-tight: 1.1;   /* Oswald headings */
+  --tt-leading-body:  1.55;  /* Nunito Sans body */
+
+  /* ---- Spacing (8px grid) ---- */
+  --tt-space-1: 0.25rem;
+  --tt-space-2: 0.5rem;
+  --tt-space-3: 0.75rem;
+  --tt-space-4: 1rem;
+  --tt-space-6: 1.5rem;
+  --tt-space-8: 2rem;
+  --tt-space-12: 3rem;
+  --tt-space-16: 4rem;
+
+  /* ---- Shape ---- */
+  --tt-radius-sm: 4px;
+  --tt-radius:    8px;    /* cards, inputs */
+  --tt-radius-lg: 12px;
+  --tt-radius-pill: 999px; /* buttons */
+  --tt-shadow: 0 2px 8px rgba(13, 38, 46, 0.08);
+
+  /* ---- Layout ---- */
+  --tt-container: 1120px;
+  --tt-gutter: 1rem;      /* 16px on phones */
+  --tt-gutter-lg: 2rem;   /* 32px from 768px */
+}
+
+/* Base type */
+body { font-family: var(--tt-font-body); font-size: var(--tt-text-base); line-height: var(--tt-leading-body); color: var(--tt-text); background: var(--tt-bg); }
+h1, h2, h3, h4 { font-family: var(--tt-font-head); font-weight: 500; line-height: var(--tt-leading-tight); color: var(--tt-navy); margin: 0 0 var(--tt-space-4); }
+h1 { font-size: var(--tt-text-4xl); } h2 { font-size: var(--tt-text-3xl); } h3 { font-size: var(--tt-text-2xl); } h4 { font-size: var(--tt-text-xl); }
+@media (max-width: 640px) { h1 { font-size: var(--tt-text-3xl); } h2 { font-size: var(--tt-text-2xl); } }
+a { color: var(--tt-link); }
+
+/* Buttons — white on orange is 3.28:1, so button text is at least 18px bold */
+.tt-btn { display: inline-block; font-family: var(--tt-font-body); font-weight: 700; font-size: 1.125rem; padding: 0.875rem 1.75rem; border-radius: var(--tt-radius-pill); text-decoration: none; border: 2px solid transparent; cursor: pointer; min-height: 48px; }
+.tt-btn-primary { background: var(--tt-orange); color: var(--tt-white); }
+.tt-btn-primary:hover { background: var(--tt-orange-600); }
+.tt-btn-secondary { background: var(--tt-white); color: var(--tt-navy); border-color: var(--tt-navy); }
+.tt-btn-secondary:hover { background: var(--tt-navy); color: var(--tt-white); }
+.tt-btn:focus-visible { outline: 3px solid var(--tt-focus); outline-offset: 2px; }
