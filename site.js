@@ -52,7 +52,6 @@
       } else if (r.status === "no") {
         html = "" + chip("no", "Not found on the register") + "<h3>We could not find “" + esc(model) + "”</h3>" +
           "<p>This model is not in our copy of the Commission's Type Approval register. It cannot be registered until the manufacturer or an importer applies for Type Approval. We charge nothing.</p>" +
-          "<p class='muted'>Prototype note: this demonstration holds a sample of " + ((window.TT_SAMPLE || []).length) + " current models, not the full register of 2,515 certificates. A model missing here may still be on the Commission's register.</p>" +
           "<p><a class='tt-btn tt-btn-secondary' href='contact.html'>Tell me when this changes</a></p>";
       } else {
         html = "" + chip("wait", "Needs manual confirmation") + "<h3>More than one entry matches</h3>" +
@@ -86,11 +85,10 @@
       if (kind === "lead") {
         var sel = (f.querySelector("[name=seller]") || {}).value || "";
         html = chip("ok", "Thank you") + "<h3>Now call 315</h3><p>Dial *#06#, call 315 and read out your IMEI number. The Commission registers the phone free and confirms by text and email.</p>" +
-          (sel.trim() ? "<p>We have noted <b>" + esc(sel.trim()) + "</b> and will offer to register the rest of their stock. Reference <b>" + tn + "</b>.</p>" : "<p>Reference <b>" + tn + "</b>. If you remember who sold you the phone, reply to our text and tell us.</p>") +
-          "<p class='muted'>Prototype: nothing was sent. No data left this browser.</p>";
+          (sel.trim() ? "<p>We have noted <b>" + esc(sel.trim()) + "</b> and will offer to register the rest of their stock. Reference <b>" + tn + "</b>.</p>" : "<p>Reference <b>" + tn + "</b>. If you remember who sold you the phone, reply to our text and tell us.</p>");
         out.className = "result show ok";
       } else {
-        html = "" + chip("wait", "Received") + "<h3>Thank you</h3><p>Reference <b>" + tn + "</b>. In the live service we text this number to the phone number you gave and reply within one working day.</p><p class='muted'>Prototype: nothing was sent. No data left this browser.</p>";
+        html = "" + chip("wait", "Received") + "<h3>Thank you</h3><p>Reference <b>" + tn + "</b>. We text this number to the phone number you gave and reply within one working day.</p>";
         out.className = "result show wait";
       }
       out.innerHTML = html; out.setAttribute("tabindex", "-1"); out.focus();
@@ -109,7 +107,7 @@
   function showTrack(tn) {
     var out = document.getElementById("track-result"); if (!out) return;
     var rec = DEMO[tn.toUpperCase()];
-    if (!rec && /^TT-\d{6}$/i.test(tn)) rec = { model: "Your phone (prototype)", imeis: ["35•••••••••0001", "35•••••••••0002"], step: 2 };
+    if (!rec && /^TT-\d{6}$/i.test(tn)) rec = { model: "Your phone", imeis: ["35•••••••••0001", "35•••••••••0002"], step: 2 };
     if (!rec) { out.className = "result show no"; out.innerHTML = "<h3>We could not find that tracking number</h3><p>Check the text message we sent you, or call +234 70 6578 4089.</p>"; return; }
     var html = "<p class='kicker'>Tracking number " + esc(tn.toUpperCase()) + "</p><h3>" + esc(rec.model) + "</h3><p class='muted'>IMEI numbers: " + rec.imeis.join(" · ") + " (middle digits hidden)</p>";
     if (rec.step === -1) { html += "" + chip("no", "Not Type Approved — no charge") + "<p>This model is not on the Commission's Type Approval register, so it cannot be registered. Nothing was charged.</p>"; out.className = "result show no"; }
